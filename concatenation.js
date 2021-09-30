@@ -1,0 +1,1 @@
+//Page js pour la concaténation et les littéraux de gabarit
