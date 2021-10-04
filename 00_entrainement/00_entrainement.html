@@ -1,107 +1,222 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00 Entraînement</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Javascript-Entrainement</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 
     <script>
         /*
-        PAGE ENTRAINEMENT SOMMAIRE
-        1-AFFICHAGE
-        2-TITRE DE DONNEES
-        3-COMMENTAIRES 
-        4-CONCATENER
-        5-OPERATEURS NUMERIQUES
-        6-CONDITIONS
-        7-BOUCLES
-        8-FONCTIONS
-        9-SUPPLEMENTS
-        */
-        //pour insérer du contenu dans le html
-        document.write('<h1>01 Entraînement Javascript</h1>')
+             PAGE ENTRAINEMENT SOMMAIRE
+             1- AFFICHAGE
+             2- TYPE DE DONNEES
+             3- CONSTANTES
+             4- CONCATENER
+             5- OPERATEURS NUMERIQUES
+             6- CONDITIONS
+             7- BOUCLES
+             8- FONCTIONS
+             9-SUPPLEMENTS
+             */
 
-        // 1-AFFICHAGE
+        // 1 - AFFICHAGE
 
-        document.write('<h2 style="background:orange;width:50%;color:#fff;text-align:center;">1 - AFFICHAGE</h2>');
+        document.write('<h1> 01 Entrainement Javascript</h1>');
 
-        var maBoite //je déclare une variable
-        maBoite = 10; //je lui affecte une valeur ici un nombre un "number"
 
-        let monAge = 12; //je déclare et j'affecte en même temps
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">1 - AFFICHAGE</h2>');
 
-        var maBoite2 = 56;
+        var maBoite;   // je déclare une variable
+        maBoite = 213;  //je lui affecte une valeur ici un nombre un "number"
 
-        console.log(maBoite2);
-        console.log(maBoite,monAge);
-        console.log(monAge)
+        let monAge = 12; // je déclare et j'affecte en même temps
 
-        document.write ('<p>Dans la variable maBoite il y a la valeur suivante : '+ maBoite + '</p>');
+        //  var maBoite2 = 56;
 
-        console.log('Un message dans le console.log');
-        console.log('Un message dans le console.log.info');
 
-        alert('Ceci est un message d\'alerte');
+        //  console.log(maBoite2);
+        console.log(maBoite, monAge);
+        console.log(monAge);
 
-        confirm('Merci de confirmer, svp.');
+        document.write('<p>Dans la variable maBoite il y a la valeur suivante:' + maBoite + '</p>');
 
-        prompt('Comment allez-vous?');
+        console.log('un message dans le console.log');
+
+        //  alert('Ceci est un message d\'alerte');
+
+        //  confirm('Merci de confirmer,svp.');
+
+        //  prompt('Comment allez-vous?');
 
         let humeur;
         console.log(humeur);
-        humeur = prompt('Comment va?');
+        humeur = prompt('Comment va ?');
 
-        console.log('humeur')
+        console.log(humeur);
 
-        document.write('<p>Votre humeur? '+ humeur +'</p>');
+        document.write('<p>Votre humeur?:' + humeur + '</p>');
 
-        // Mini exo : demander à votre visiteur le prénom de sa maman 
+        let prenom;
+        console.log(prenom);
+        prenom = prompt('Quel est le prénom de votre maman?');
+        console.log(prenom);
+        document.write('<p>Quel est le prénom de votre maman?:' + prenom + '</p>');
 
-        let prenomMaman = prompt('Quel est le prenom de votre maman?');
-   
-        document.write('<p>Le prenom de votre maman est :'+ prenomMaman +'</p>');
-
-        // Portée locale ou globale de la variable
-        // Humeur et prenomMaman ont une portée globale
-        if(true){
-            let nombre = 50;
-            // nombre a une portée locale ; à cause du if
+        // portée locale ou globale de la variable
+        // humeur et Prenom ont des portées globales 
+        if (true) {
+            let nombre = 58;
+            // nombre a une portée locale 
             console.info(nombre);
         }
-            
+
         let nombre2;
-        if(true) {
-            nombre2 =999;
+        if (true) {
+            nombre2 = 999;
         }
-        // Ici la variable a une portée globale
+        // ici la variable a une portée globale 
         console.log(nombre2);
 
-        // Une variable; le contenu varie
+        // une variable; le contenu varie
         var noteEval = 12;
         console.info(noteEval);
 
-        // addition , multiplication, division, soustraction d'une valeur numérique
-        noteEval +=2
+        // addition d'une valeur numérique (number) avec +=
+        noteEval += 2;
         console.info(noteEval);
 
-        //2 - LE TYPE DE DONNEES
-        document.write('<h2 style="background: orange;width: 50%; color: #fff;text-align: center;">2-TYPE DE DONNEES</h2>');
+        // addition d'une valeur numérique (number) avec += soustraction -=, division /=, multiplication *=
+        noteEval += 2
+        // noteEval=18
+        console.info(noteEval);
 
-        var monTexte = 'Voici une phrase pour Arnold avec une \'';
+        // 2 - TYPE DE DONNEES
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">2 - TYPE DE DONNEES</h2>');
+
+        var monTexte = 'Voici une phrase pour Miredi avec une \ ';
         document.write('<p>' + monTexte + '</p>');
-        console.log(typeof(monTexte));
+        console.log(typeof (monTexte));
 
-        console.log(typeof(noteEval));
+        console.log(typeof (noteEval));
 
-        document.write(typeof(monTexte) + '<br>');
-        document.write(typeof(noteEval) + '<br>');
+        document.write(typeof (monTexte) + '<br>');
+        document.write(typeof (noteEval) + '<br>');
+
+
+        // 3- CONSTANTES
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">3- CONSTANTES</h2>');
+
+        const neBougePas = 'Ma constante impossible à modifier !';
+        let meteo = 'beau temps';
+
+        console.log(meteo);
+
+        meteo = 'mauvais temps';
+
+        console.log(meteo);
+
+        console.log(neBougePas);
+
+        // mini exo afficher avec 
+
+        document.write('<p style="background:lightgrey;width:50%;color:#fff;text-align: center;"> la  constante  neBougePas  contient "' + neBougePas + ' " </p>');
+
+        // neBougePas = 'coucou';
+
+        // 4- CONCATENER
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">4- CONCATENER</h2>');
+
+        // mini exo 2 variable nom,prenom et affichez "The name is CHINE,Fatima CHINE
+        //let firstname = 'Maria';
+        //let lastname = 'Bond' ;
+        //console.log(firstname, lastname);
+
+        //document.write('<p>The name is ' + lastname + ' , ' + firstname + ' ' + lastname +'.</p>');
+
+        let firstname = 'Jacques';
+        let lastname = 'Chirac';
+        document.write('<p> The name is ' + lastname + ' , ' + firstname + ' ' + lastname +'.</p>');
+
+        // 5 - OPERATEURS NUMERIQUES
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">5 - OPERATEURS NUMERIQUES</h2>');
+
+        
+        let addition = 10+5;
+        // affiche : le résultat d'une addition : 15
+
+        //<p> Le résultat d'une addition : 15 </p>
+        document.write('<p style="background:lightblue;width:50%;color:#fff;text-align: center;"> le résultat d\'une addition : "' + addition + ' " </p>');
+
+        let multiplication = 10*5;
+        //<p> Le résultat d'une multiplication : 50 </p>
+        document.write('<p style="background:lightblue;width:50%;color:#fff;text-align: center;"> le résultat d\'une multiplication : "' + multiplication + ' " </p>');
+
+        let soustraction = 10-5;
+        //<p> Le résultat d'une soustraction : 5 </p>
+        document.write('<p style="background:lightblue;width:50%;color:#fff;text-align: center;"> le résultat d\'une soustraction : "' + soustraction + ' " </p>');
+
+        let division = 10/5;
+        //<p> Le résultat d'une division : 2 </p>
+        document.write('<p style="background:lightblue;width:50%;color:#fff;text-align: center;"> le résultat d\'une division : "' + division + ' " </p>');
+
+        //modulo
+        //exemple pour l'utilisation du modulo ; repondre à la question suivante : j'ai 10 billes je les partage entre 3 personnes , il m'en reste combien ?
+        let modulo = 10%3;
+        console.log(modulo);
+        //exo affichez : le modulo de 10 % 3 est 1
+        document.write('<p style="background:lightblue;width:50%;color:#fff;text-align: center;"> le modulo de 10 % 3 est : "' + modulo + ' " </p>');
+
+        // Exo
+        document.write('<h3 style=" margin:auto; background:orange;width:60%;color:#fff;text-align: center;">5 - Exo 1 Quel âge avez-vous?</h3>');
+
+        //Consigne réalisezr un prompt() demandant son âge à un utilisateur , récupérer cette donnée et l'utiliser pour afficher " vous avez xx ans"
+
+        let sonAge = prompt('Quel âge avez-vous?');
+
+        //console.log(age);
+
+        document.write('<p> Vous avez ' + sonAge + ' ans </p>');
+
+        // Exo
+        //Consigne
+        // 1 - récupérez une valeur (dans un prompt) donnée par un utilisateur
+        // 2 - envoyer ensuite une alert()indiquant le résultat de cette valeur au carré puis au cube
+        // 3 - puis on fera un document.write
+
+        let votreChiffre = prompt('Quel est votre chiffre ?');
+        //console.log(votreChiffre);
+
+        //console.log(votreChiffre * votreChiffre);
+        //console.log(votreChiffre**2);
+
+       // console.log(votreChiffre * votreChiffre * votreChiffre);
+       // console.log(votreChiffre **3);
+
+       let auCarre = votreChiffre * votreChiffre;
+       //console.log(auCarre);
+
+       let auCube = votreChiffre * votreChiffre * votreChiffre;
+       console.log(auCarre, auCube)
+
+       alert(' Vous avez saisi le chiffre : ' + votreChiffre + ' \nce chiffre au carré est égal à ' + auCarre + '\nce chiffre au cube est égal à ' + auCube + '.')
+
+
 
     </script>
+
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
