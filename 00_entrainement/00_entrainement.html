@@ -211,6 +211,51 @@
 
        document.write('<p> Vous avez saisi le chiffre ' + votreChiffre + '<br>ce chiffre au carré est égal à ' + auCarre + ' <br>ce chiffre au cube est égal à ' + auCube + ' </p>');
 
+        // 6 - CONDITIONS
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;">6 - CONDITIONS</h2>');
+
+        let a = 2, b = 5, c = 2;
+        console.log( a, b, c );
+
+        //MINI Exo
+        //si a est supérieur à b j'écris "a est supérieur" sinon j'écris a n'est pas supérieur à b dans un document write
+
+        if( a > b){
+            document.write('<p>a = ' + a + ' est supérieure à b = ' + b + '</p>');
+        }
+        else{
+            document.write('<p>a = ' + a + ' n\' est  pas supérieur à b = ' + b + '</p>'); 
+        }
+
+        //MINI Exo
+        // Test de l'égalité de a et b et montrer ce test dans un document write en affichant les valeurs de a et b
+
+        if ( a==b){
+            document.write('<p> = Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a est égal à b </p>')
+        }
+
+        else{
+            document.write('<p> = Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a n\'est égal à b </p>')
+        }
+
+        //if( a == b){
+        //    document.write('<p> = ' + a + ' et, b = ' + b + ' a est égal à b </p>')
+       // }
+        //else{
+       //    document.write('<p> a = ' + a + ' n\' est  pas supérieur à b = ' + b + '</p>')
+        //}
+
+        // Exo
+
+        if( a===b ){
+            document.write('<p> = Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a et b  sont égaux en types et valeurs</p>')
+        }
+        else{
+            document.write('<p> = Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a et b sont différents en valeurs et/ou en types </p>')
+        }
+
+
     </script>
 
 </head>
