@@ -255,6 +255,95 @@
             document.write('<p> = Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a et b sont différents en valeurs et/ou en types </p>')
         }
 
+        //EXO tester la valeur de a par rapport au chiffre 5 ; inférieur ?égal?supérieur? ou alors c'est pas un nombre,dans une condition multiple (blocs de code>document.write)
+
+        console.log(a);
+
+        //if( a < 5 ) {
+        //    alert(' a contient une valeur strictement inférieure à 5');
+        //}
+        //if( a = 5 ) {
+        //   alert(' a contient une valeur  égale à 5');
+        //}
+        //if( a > 5 ) {
+        //    alert(' a contient une valeur strictement supérieure à 5');
+        //}
+        //else{
+        //    document.write('<p> = a qui contient ' + a + ' '\n'est pas un nombre </p>');
+        //}
+
+        if( a < 5) {
+            document.write('la valeur de a qui contient :' + a + 'est inéférieure à 5');
+        }
+        if( a = 5) {
+            document.write('la valeur de a qui contient :' + a + 'est égale à 5');
+        }
+        if( a < 5) {
+            document.write('la valeur de a qui contient :' + a + 'est supérieure à 5');
+        }
+        else{
+            document.write('<p> = a qui contient ' + a + 'nest pas un nombre </p>');
+        }
+ 
+        // Exo : a est-il supérieur et b est-il supérieur à c if...else?
+
+        //let a = 2, b = 5, c = 2;
+        if( a >= b && b >= c){
+            document.write('<p> = Pour a qui vaut '+ a + ', b qui vaut ' + b +'  et c qui vaut + c + a est supérieur à b ET b est supérieur à c </p>');
+        }
+        else{
+            document.write('<p>Ici on teste si a(' + a +') est supérieur à b (' + b + ' ) ET si b est supérieur à c (' + c + ' ) ; mais dans ce cas au moins une des deux conditions n\' est pas remplie </p>');
+        }
+
+        //Exo : a est supérieur à b OU b est supérieur à c 
+
+        if( a > b || b > c){
+            document.write('<p> = Pour a qui vaut '+ a + ', b qui vaut ' + b +'  et c qui vaut '+ c +' ici au moins une des deux conditions est vraie ( a > b OU b > c)</p>');
+        }
+        else{
+            document.write('<p> = Pour a qui vaut '+ a + ', b qui vaut ' + b +'  et c qui vaut '+ c +' dans ce cas aucuine des deux conditions n\'est vraie </p>');
+        }
+
+        // Récupérez dans une variable la réponse à la question suivante:
+        //Parmi ces couleurs , le vert, l'azur, le rouge cramoisi, le parme ; quelle est votre couleurs préférée? 
+
+        let couleur = prompt('Parmi ces couleurs , le vert, l\'azur, le rouge , le parme ; quelle est votre couleurs préférée? ');
+
+        console.log(couleur);
+
+        //document.write('<p> Quelle est votre couleur préférée? ' + votreCouleur + ' est </p>');
+
+        if ( couleur == 'vert'){
+            document.write('<p> Votre couleur préférée est le' + couleur  + '</p>');
+        }else if ( couleur == 'azur'){
+            document.write('<p> Votre couleur préférée est le' + couleur  + '</p>');
+        }else if ( couleur == 'rouge'){
+            document.write('<p> Votre couleur préférée est le' + couleur  + '</p>');
+        }else if ( couleur == 'parme'){
+            document.write('<p> Votre couleur préférée est le' + couleur  + '</p>');
+        }else {
+            document.write('<p> Votre couleur préférée est le' + couleur  + '</p>');
+        }
+
+        // Puis la même chose avec le switch
+            
+    switch (couleur) {
+        case 'vert':
+            document.write('<p> Votre couleur préférée est le vert</p>');
+            break;
+        case 'azur' :
+            document.write('<p> Votre couleur préférée est azur</p>');
+            break;
+        case 'rouge' :
+            document.write('<p> Votre couleur préférée est le rouge</p>');
+            break;
+        case 'parme' :
+            document.write('<p> Votre couleur préférée est le parme</p>');
+            break;
+        default:
+        document.write('<p> Votre couleur préférée n\'est ni le vert , ni l\'azur , ni le rouge , ni le parme , votre couleur préférée est le ' + couleur + ' </p>');
+
+    }   
 
     </script>
 

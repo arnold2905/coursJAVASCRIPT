@@ -24,3 +24,21 @@ if( x > 1) {
 }else if ( x < -2) {
     alert(' x contient une valeur strictement inférieure à -2 ')
 }
+
+//EXO tester la valeur de a par rapport au chiffre 5 ; inférieur ?égal?supérieur? ou alors c'est pas un nombre,dans une condition multiple (blocs de code>document.write)
+
+a = 5;
+console.log(a);
+if( a > 5 ) {
+    alert(' a contient une valeur strictement supérieure à 5');
+}
+if( a > 5 ) {
+    alert(' a contient une valeur égale à 5');
+}
+if( a < 5 ) {
+    alert(' a contient une valeur strictement inférieure à 5');
+}
+
+else{
+    document.write('<p> = a qui vaut ' + a + '  a est un nombre en valeur et/ou en type </p>')
+}
