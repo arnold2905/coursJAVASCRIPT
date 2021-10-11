@@ -329,21 +329,36 @@
             
     switch (couleur) {
         case 'vert':
-            document.write('<p> Votre couleur préférée est le vert</p>');
+            document.write('<p>Switch - Votre couleur préférée est le vert</p>');
             break;
         case 'azur' :
-            document.write('<p> Votre couleur préférée est azur</p>');
+            document.write('<p>Switch - Votre couleur préférée est azur</p>');
             break;
         case 'rouge' :
-            document.write('<p> Votre couleur préférée est le rouge</p>');
+            document.write('<p>Switch - Votre couleur préférée est le rouge</p>');
             break;
         case 'parme' :
-            document.write('<p> Votre couleur préférée est le parme</p>');
+            document.write('<p>Switch - Votre couleur préférée est le parme</p>');
             break;
         default:
-        document.write('<p> Votre couleur préférée n\'est ni le vert , ni l\'azur , ni le rouge , ni le parme , votre couleur préférée est le ' + couleur + ' </p>');
+        document.write('<p>Switch - Votre couleur préférée n\'est ni le vert , ni l\'azur , ni le rouge , ni le parme , votre couleur préférée est le ' + couleur + ' </p>');
 
     }   
+
+    // - 7 - Les Boucles 
+
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;"> 7 - LES BOUCLES</h2>');
+
+        // Exo boucle while
+
+        let w1 = 0;
+        console.log(typeof  w1, w1); 
+        while ( w1 <= 15 ) { // tant que le contenu de la variable est inférieur ou égal à 15
+            document.write('<p>La variable w1 = ' + w1 + ' ,</p>');// exécute ce bloc de code
+            w1++; // contenu de la variable + 1
+        } // la boucle stoppe dès que w1 atteint 15
+
+        
 
     </script>
 
