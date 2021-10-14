@@ -387,7 +387,87 @@
                 document.write('et la boucle se termine là car for3 arrive à' + for3);
             } // fin du else
         } // fin du for 
-         
+
+
+    // - 8 - FONCTIONS PREDEFINIES ET UTILISATEUR
+        document.write('<h2 style=" margin:auto; background:orange;width:80%;color:#fff;text-align: center;"> 8 - LES FONCTIONS</h2>');
+
+        var phrase1 = " Vive les fleurs";
+        var phrase2 = " Silence !!! ; Hopital !";
+        console.log( phrase1, phrase2 );
+
+        // Uppercase
+        console.log(phrase1.toUpperCase());
+
+        document.write('<p> Cette phrase en majuscule : ' + phrase1. toUpperCase() + '</p>');
+        document.write('<p> Cette phrase en miniscule : ' + phrase2. toLowerCase() + '</p>');
+
+        // la fonction : length
+
+        var phrase3 = ' Plusieurs planètes dans notre galaxie !'
+        console.log(phrase3.length);
+        document.write('<p> Test , dans la phrase suivante ' + phrase3 + ' il y a ' + phrase3.length + ' caractères.</p>');
+
+        function beauTemps(){
+            return document.write('<p> Il fait beau</p>');
+        }
+        beauTemps();
+
+        //function coucou() {
+        //    return alert('Coucou les amis !');
+        //}
+        //coucou();
+
+        function direBonjour(prenom) {
+            var message = document.write('<p> Bonjour ' + prenom + ' Comment vas-tu ?</p>');
+            return message;    
+        }
+        direBonjour('Michel !')
+
+        function uneLigne() {
+            return document.write('<hr>');
+        }
+        uneLigne();
+
+        // Cumul d'un prompt et une fonction
+
+        let prenom2 = prompt ('Quel est votre prénom?');
+        console.log(prenom2);
+
+        function direBonjour2(prenom2) {
+            var message2 =  document.write('<p> Bonjour ' + prenom2 + ' Bienvenue sur notre site .</p>');
+            return message2;
+        }
+        direBonjour2(prenom2);
+
+        // Exo 
+        // 1 - Demandez ' Quelle est la saison?' et 'Quelle est la température extérieure?'
+        // 2 - faites une fonction 'meteo' qui renvoie les réponses à ces deux questions
+
+        let saison = prompt ('Quelle est la saison?');
+        //let temperature = prompt ('Quelle est la température extérieure?');
+        //console.log(saison,temperature);
+
+       // function questionMeteo(saison,temperature) {
+        //   var questionMeteo =  document.write('<p> La saison : ' + saison+ ' et il fait ' + temperature + ' °.</p>');
+       //     return questionMeteo;
+        //}
+        //questionMeteo(saison,temperature);
+
+        // Exo
+        // Faites un if else avec deux types de phrases
+        // si c'est le printemps = ' Nous sommes au printemps '
+        // et si c'est l'une des 3 autres saisons ; il faut écrire 'Nous sommes en '
+
+
+
+        if(saison=='printemps') {
+            document.write(' Nous sommes au :' + saison + '!');
+        }
+        else{
+            document.write('<p> Nous sommes en ' + saison + ' </p>');
+        }
+        console.log(saison);
 
 
     </script>
