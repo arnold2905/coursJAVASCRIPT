@@ -460,14 +460,54 @@
         // et si c'est l'une des 3 autres saisons ; il faut écrire 'Nous sommes en '
 
 
+        //if(saison=='printemps') {
+        //    document.write(' Nous sommes au :' + saison + '!');
+        //}
+        //else{
+        //    document.write('<p> Nous sommes en ' + saison + ' </p>');
+        //}
+        //console.log(saison);
 
-        if(saison=='printemps') {
-            document.write(' Nous sommes au :' + saison + '!');
-        }
-        else{
-            document.write('<p> Nous sommes en ' + saison + ' </p>');
-        }
-        console.log(saison);
+        function meteoIfElseIf(saison, temperature) {
+        if (saison == 'printemps') {
+        var message5 = document.write('Nous sommes au ' + saison + ' et la température est de ' + temperature + ' degrés.');    
+         } else if (saison == 'été' || saison == 'automne' || saison == 'hiver') {
+             var message5 = document.write('Nous sommes en ' + saison + ' et la température est de ' + temperature + ' degrés.');  
+        } else {
+            document.write('Cette saison ' + saison + ' n\'existe pas !!! Sauf sur Neptune !');
+        } // fin condition
+         return message5;
+    } // fin fonction
+
+    meteoIfElseIf(saison, temperature);
+    // Appel de la fonction
+
+    // Un autre EXO avec article et nouvelle variable et nouvelle fonction :
+
+    function meteoFin(saison, temperature) { // debut fonction
+        var article2;
+        if(saison == 'printemps') { // debut condition
+            article2 = 'au';
+        } else if (saison == 'été' || saison == 'automne' || saison == 'hiver'){
+            article2 = 'en';
+        } else {
+            return alert('Cette saison : ' + saison + ' n\'existe pas !!!');
+        } // fin condition
+        return document.write('<p>6/ MeteoFin() /// Nous sommes ' + article2 + ' ' +  saison + ' et il fait ' + temperature + ' degrés.</p>');
+    } // fin fonction
+
+    meteoFin(saison, temperature);
+    // Appel de la fonction
+
+    //EXO 
+    // faire une fonction quelleEcole() 
+    // demandez à votre visiteur "quel âge à votre enfant ?" 
+    // dans une condition multiple >>> si il a moins de 6 ans lui dire "votre enfant doit avoir plus de 6 ans pour rentrer à l'école", si il a entre 6 et 11 ans "votre enfant va en primaire", si il a entre 11 et 15 ans votre enfant va au collège, si il a entre 15 et 18 ans "votre enfant doit aller au lycée" sinon "votre enfant n'est pas en âge scolaire"
+
+
+
+    
+    
 
 
     </script>
