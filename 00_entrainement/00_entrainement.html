@@ -468,44 +468,80 @@
         //}
         //console.log(saison);
 
-        function meteoIfElseIf(saison, temperature) {
-        if (saison == 'printemps') {
-        var message5 = document.write('Nous sommes au ' + saison + ' et la température est de ' + temperature + ' degrés.');    
-         } else if (saison == 'été' || saison == 'automne' || saison == 'hiver') {
-             var message5 = document.write('Nous sommes en ' + saison + ' et la température est de ' + temperature + ' degrés.');  
-        } else {
-            document.write('Cette saison ' + saison + ' n\'existe pas !!! Sauf sur Neptune !');
-        } // fin condition
-         return message5;
-    } // fin fonction
+        //function meteoIfElseIf(saison, temperature) {
+        //if (saison == 'printemps') {
+        //var message5 = document.write('Nous sommes au ' + saison + ' et la température est de ' + temperature + ' degrés.');    
+         //} else if (saison == 'été' || saison == 'automne' || saison == 'hiver') {
+          //   var message5 = document.write('Nous sommes en ' + saison + ' et la température est de ' + temperature + ' degrés.');  
+        //} else {
+        //    document.write('Cette saison ' + saison + ' n\'existe pas !!! Sauf sur Neptune !');
+        //} // fin condition
+        // return message5;
+    //} // fin fonction
 
-    meteoIfElseIf(saison, temperature);
+    //meteoifElseIf(saison, temperature);
     // Appel de la fonction
 
     // Un autre EXO avec article et nouvelle variable et nouvelle fonction :
 
-    function meteoFin(saison, temperature) { // debut fonction
-        var article2;
-        if(saison == 'printemps') { // debut condition
-            article2 = 'au';
-        } else if (saison == 'été' || saison == 'automne' || saison == 'hiver'){
-            article2 = 'en';
-        } else {
-            return alert('Cette saison : ' + saison + ' n\'existe pas !!!');
-        } // fin condition
-        return document.write('<p>6/ MeteoFin() /// Nous sommes ' + article2 + ' ' +  saison + ' et il fait ' + temperature + ' degrés.</p>');
-    } // fin fonction
+    //function meteoFin(saison, temperature) { // debut fonction
+    //    var article2;
+    //    if(saison == 'printemps') { // debut condition
+    //        article2 = 'au';
+    //    } else if (saison == 'été' || saison == 'automne' || saison == 'hiver'){
+    //       article2 = 'en';
+    //    } else {
+    //        return alert('Cette saison : ' + saison + ' n\'existe pas !!!');
+    //    } // fin condition
+    //    return document.write('<p>6/ MeteoFin() /// Nous sommes ' + article2 + ' ' +  saison + ' et il fait ' + temperature + ' degrés.</p>');
+    //} // fin fonction
 
-    meteoFin(saison, temperature);
+    //meteoFin(saison, temperature);
     // Appel de la fonction
 
     //EXO 
     // faire une fonction quelleEcole() 
     // demandez à votre visiteur "quel âge à votre enfant ?" 
-    // dans une condition multiple >>> si il a moins de 6 ans lui dire "votre enfant doit avoir plus de 6 ans pour rentrer à l'école", si il a entre 6 et 11 ans "votre enfant va en primaire", si il a entre 11 et 15 ans votre enfant va au collège, si il a entre 15 et 18 ans "votre enfant doit aller au lycée" sinon "votre enfant n'est pas en âge scolaire"
+    // dans une condition multiple >>> s'il a moins de 6 ans lui dire "votre enfant doit avoir plus de 6 ans pour rentrer à l'école", si il a entre 6 et 11 ans "votre enfant va en primaire", si il a entre 11 et 15 ans votre enfant va au collège, si il a entre 15 et 18 ans "votre enfant doit aller au lycée" sinon "votre enfant n'est pas en âge scolaire"
+
+        
+
+    //function quelleEcole(AgeEnfant) {
+    //    if(AgeEnfant < 6) {
+    //        var quelleEcole =  document.write('<p>votre enfant doit avoir plus de 6 ans pour rentrer à l\'école</p>')
+    //    }else if( AgeEnfant == 6 ||AgeEnfant <= 11 ) {
+    //        document.write('<p>votre enfant va en primaire  car il a '+AgeEnfant+ ' ans</p>');
+    //    }else if( AgeEnfant == 11  ||AgeEnfant <= 15) {
+    //        var quelleEcole =  document.write('<p>votre enfant va au collège car il a '+AgeEnfant+ ' ans</p>');
+    //    }else if( AgeEnfant == 15||AgeEnfant <= 18 ) {
+    //        var quelleEcole =   document.write('<p>votre enfant doit aller au lycée car il a ' +AgeEnfant+ ' ans ' + '</p>');
+    //    }else {
+    //        var quelleEcole =   document.write('<p>votre enfant n\'est pas en âge scolaire car il a '+AgeEnfant+' ans </p>');
+    //     }
+    //     return Ecole;
+    //}
+    //quelleEcole(AgeEnfant);
 
 
+        var ageEnfant = prompt('Quel âge a votre enfant?');
+        console.log(ageEnfant);
 
+        function quelleEcole(ageEnfant){
+            if ( ageEnfant < 6) {
+                var ecole = document.write('<p> Votre enfant a' + ageEnfant + ' ans il doit avoir plus de 6 ans pour rentrer à l\'école.</p>')
+            } else if ( ageEnfant >=6 && ageEnfant <11) {
+                var ecole = document.write('<p> Votre enfant a' + ageEnfant + ' ans il a entre 6 et 11 ans ; il va à l\'école primaire.</p>')
+            } else if (ageEnfant >=11 && ageEnfant <15){
+                var ecole = document.write('<p> Votre enfant a' + ageEnfant + ' ans il a entre 11 et 15 ans ; il va au collège.</p>')
+            } else if (ageEnfant >=15 && ageEnfant <18){
+                var ecole = document.write('<p> Votre enfant a' + ageEnfant + ' ans il a entre 15 et 18 ans ; il va au lycée.</p>')
+            } else {
+                var ecole = document.write('<p> Votre enfant a' + ageEnfant + ' et n\'est pas scolarisable.</p>')
+            }
+            return ecole;
+        }
+
+        quelleEcole(ageEnfant);
     
     
 
