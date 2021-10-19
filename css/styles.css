@@ -2,10 +2,10 @@
 
 
 body {
-    background-color: lightblue;
+    background-color: lightsalmon;
 }
 
-main {
+main{
     width: 80%;
     margin: 0 auto;
     padding: 10px;
@@ -13,13 +13,18 @@ main {
 }
 
 .stabilo {
-    background-color: rgb(207, 207, 46);
+    background-color: mistyrose;
 }
 
-.button {
-    background-color: #4CAF50;
-    border: none;
+.container {
+    background-color: lightcyan;
     color: white;
+}
+
+.bouton {
+    background-color: pink;
+    border: none;
+    /* color: white; */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -27,24 +32,43 @@ main {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-
 }
 
 code {
     background-color: #fff;
-    color: red;
+    color: palevioletred;
     padding: 5px;
 }
 
-h1 {
-    text-align: center;
+h2 {
+    border-bottom: 2px solid pink;
 }
 
-h2 {
-    border-bottom: 1px solid rgb(110, 110, 110);
+td p:nth-child(even) {
+    background: rgb(199, 243,243);
+}
+
+em {
+    background-color:rgb(199, 243,243);
 }
 
 .ma-classe {
+    /* background-color: pink; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#rouge {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
-    background-color: lightgoldenrodyellow;
+}
+
+#orange {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
 }

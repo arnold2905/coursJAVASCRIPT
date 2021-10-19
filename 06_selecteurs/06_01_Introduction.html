@@ -35,62 +35,69 @@
     <div class="container">
 
         <section class="row mt-4">
-            
             <div class="col-12">
                 <h2 id="titreN2">Ce titre sera sélectionné dans la console (avec querySelector)</h2>
-                 
-            </div>   
+            </div>
             <!-- fin col -->
             <div class="col-3">
-                <h2 id="aChanger">2 - Toupi j'ai changé le titre du h2</h2>
-                <p class="ma-classe"> Paragraphe 1</p>   
+                <h2 id="aChanger">Ce titre va changer</h2>
+                <p class="ma-classe">Paragraphe 1</p>
             </div>
             <!-- fin col -->
-            <div class="col-2">
-                <p class="ma-classe"> Paragraphe 2</p>   
+            <div class="col-3">
+                <p class="ma-classe">Paragraphe 2 </p>
             </div>
             <!-- fin col -->
-            <div class="col-2">
-                <p class="ma-classe"> 3 - Une phrase dans ce paragraphe</p>   
+            <div class="col-3">
+                <p class=""></p>
             </div>
             <!-- fin col -->
-            <div class="col-2">
-                <p class="ma-classe"> Paragraphe 4</p>   
-            </div>
-            <!-- fin col -->
-            <div class="col-2">
-                <p class="ma-classe"> Paragraphe 5</p>   
-            </div>
-            <!-- fin col -->
-            <div class="col-2">
-                <p class="ma-classe"> Paragraphe 6</p>   
+            <div class="col-3">
+                <p class=""></p>
             </div>
             <!-- fin col -->
 
         </section>
-        <!-- fin rangée  -->
 
+        <!-- fin rangée -->
         <section class="row mt-4">
-            <div class="col-sm-12 col-md-6 bg-light">
-                <h2 class="text-decoration-underline text-danger"></h2>
-               
+            <div class="col-6">
+                <p class="ma-classe stabilo">Une phrase dans ce paragraphe</p>
             </div>
             <!-- fin col -->
 
-            <div class="col-sm-12 col-md-6">
-                <h2 class="text-decoration-underline text-danger"></h2>
-                
-            <!-- fin col -->  
-            
-        </section>
-        <!-- fin de rangée -->
+          <div class="col-sm-12 col-md-6 bg-light">
+                <p class="une-classe">paragraphe 1</p>
+                <p class="une-classe">paragraphe 2</p>
+                <p class="une-classe">paragraphe 3</p>
+                <p class="une-classe">paragraphe 4</p>
+                <p class="une-classe">paragraphe 5</p>
+          </div>
 
-        <section class="row justify-content-center mt-4">
-            
+          <div class="col-sm-12 col-md-6">
+              <ul>
+                  <li>liste 1</li>
+                  <li> liste 2</li>
+                  <li>liste 3</li>
+                  <li> liste 4</li>
+                  <li class="bg-secondary">liste 5</li>
+                  <li>liste 6</li>
+              </ul>
+          </div>
+
+          <div class="col-12">
+              <p class="selectClasse">Paragraphe 1:Hello</p>
+              <p  class="selectClasse aChanger">Paragraphe 2 :Je change ce texte je passe le fond en lightblue et le texte en blanc et gras</p>
+              <p class="selectClasse">Paragraphe 3 : Quel beau temps!</p>
+              <p class="selectClasse">Paragraphe 4 :lorem. </p>
+              <p class="selectClasse">Paragraphe 5</p>
+              <p class="selectClasse">Paragraphe 6 </p>
+          </div>
+
         </section>
+        <!-- fin rangée -->
 
     </div>
-
     <!-- fin div container -->
 
     <!-- Optional JavaScript -->
@@ -155,6 +162,36 @@
         
         //selectP[1].classList.add ('bg-warning');
 
+        // 6 - avec querySelector
+        // ici je sélectionne un élément et son id 
+        let query1 = document.querySelector ('#titreN2');
+        console.log(query1);
+
+        let query2 = document.querySelectorAll ('.une-classe');
+        console.log(query2);
+
+        let query3 = document.querySelectorAll ('li');
+        console.log(query3);
+
+        query3[3].style.backgroundColor ='olive';
+
+        let query4 = document.querySelectorAll('li.bg-primary');
+        console.log(query4);
+
+    // Exo 
+    // Dans dans une nouvelle col 'rajoutez 4 ou 6 paragraphe avec selectClasse dans une variable query5'
+    // Changez le texte du n°2 pour ' je change le texte de ce paragraphe 2 ' passez le en fond ligthblue et texte blanc et en gras
+
+
+    let query5 = document.querySelectorAll('selectClasse');
+        console.log(query5);
+
+    query5[1].style.backgroundColor = 'lightblue';
+    query5[1].innerHTML = 'je change les texte du ce paragraph 2...';
+    query5[1].style.color = 'white';
+    query5[1].style.fontWeigth = 'bold';
+
+    
         </script>
 </body>
 </html>
