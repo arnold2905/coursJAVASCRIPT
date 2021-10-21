@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecteurs</title>
+
+    <style>
+        .avion {
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h2 id="titre">Mon titre de niveau 2</h2>
+
+    <div class="avion"> Airbus 1 - A320</div>
+    <div class="avion"> Airbus 2 - A320</div>
+    <p class="avion"> Coucou le premier</p>
+    <div class="avion"> Airbus 2 - A320</div>
+
+    <p id="para">Paragraphe 1</p>
+    <p>Paragraphe 2</p>
+    <p title="InfoBulle">Paragraphe 3</p>
+    <p>Paragraphe 4</p>
+    <p>Paragraphe 5</p>
+
+    <script>
+        //sélection naturelle
+        var monTitre1 = titre;
+        console.log(monTitre1);
+
+        //selection par id
+        var monTitre2 = document.getElementById('titre');
+        console.log(monTitre2);
+
+        // selection par classe ( pour récupérer toutes les classes)
+        var lesAvions = document.getElementsByClassName('avion');
+        console.log(lesAvions);
+
+        // console log pour sélectionner une seule classe
+        console.log(lesAvions[1]);
+
+        // injecter le texte suivant : ' Il est beau mon avion !' dans indice 1
+
+        //pour voir le contenu , pour être sûr que c'est celui là qu'on veut voir; on utilise 'innerHTML'qui permet de voir le contenu d'un élément
+        console.log(lesAvions[1].innerHTML);
+        lesAvions[1].innerHTML = ' Il est beau mon avion';
+
+        console.log(lesAvions[1]);
+        console.log(lesAvions[1].innerHTML);
+
+        // modifier le contenu du h2 pour écrire ' Il est beau mon bonnet !'
+
+        monTitre2.innerHTML = 'Il est beau mon bonnet !';
+        
+        // comment récupérer tous les paragraphes par nom d'élément
+        
+        let lesP = document.getElementsByTagName('p');
+        console.log('lesP', lesP);
+
+        // comment récupérer dans un "console log" le contenu du paragraphe 2
+
+        console.log(lesP[2].innerHTML);
+
+        // faire une boucle 'for' pour passer le texte des p en 'red' et mettre une margin-top de 10px aux p 
+
+        for( let i = 0; i < lesP.length; i++) {
+            console.log(lesP[i]);
+          lesP[i].style.color = "red";
+          lesP[i].style.marginTop = "10px";
+          lesP[i].innerHTML += ' Coucou les loulous !';
+        }
+
+        // on sélectionne les p avec 'query'
+        let lesP2 = document.querySelectorAll ('p');
+        console.log(lesP2);
+
+        // on sélectionne toutes les class avions avec query
+
+        let lesAvions2 = document.querySelectorAll('.avion');
+        console.log(lesAvions2);
+
+        // sélectionner l'id para
+        let paraP = document.querySelector('p#para');
+        console.log(paraP);
+
+        // sélectionner uniquement toutes les div avec la "class" avion
+        let divAvion = document.querySelectorAll('div.avion');
+        console.log('divAvion');
+
+        // à une des div : à la seconde des div on applique un fond bleu, un texte blanc, en gras et taille de type 2em
+
+        console.log(divAvion[1].innerHTML);
+
+        divAvion[1].style.backgroundColor = "lightblue";
+        divAvion[1].style.color = "white";
+        divAvion[1].style.fontWeight = "bold";
+        divAvion[1].style.fontSize = "2em";
+        divAvion[1].style.height = "400px";
+        divAvion[1].style.width = "400px";
+
+    </script>
+</body>
+</html>
