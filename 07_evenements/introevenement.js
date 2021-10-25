@@ -66,3 +66,32 @@ function fonctionDivBleu(e) {
     this.innerHTML = 'coucou2';
     this.style.fontSize = '1.5em';
 }
+
+// le Formulaire
+
+// "focus" pour quand on est dans le champ de saisie
+document.querySelector('#email').addEventListener('focus', inputEmailFocus);
+
+function inputEmailFocus() {
+    this.style.background = "lightgreen";
+    this.classlist.add('text-white');
+}
+
+// pour changer l'apparence quand o,n sort du "focus" : on utilise "blur"
+document.querySelector('#pass').addEventListener('blur',inputPasswordBlur);
+
+function inputPasswordBlur() {
+    this.style.background = "lightyellow";
+    this.classlist.add('text-white');
+}
+
+// écouteur d'évènement sur le bouton avec click
+document.querySelector('#submit').addEventListener('click',inputBtnSubmit);
+
+function inputBtnSubmit() {// on ajoute "event" en argument à cette fonction
+    //event.preventDefault();// neutrale le formulaire pour la demo; aussi les required
+    //et les champs ne sont pas réinitilisés
+    alert('Nous avons bien reçu votre formulaire ');
+    this.classlist.add('bg-success');
+    this.innerHTML = 'Connecté';
+}
