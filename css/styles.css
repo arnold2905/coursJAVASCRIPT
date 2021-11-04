@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: lightsalmon;
+    background-color: #fff;
 }
 
 main{
@@ -18,7 +18,7 @@ main{
 
 .container {
     background-color: lightcyan;
-    color: white;
+    
 }
 
 .bouton {
