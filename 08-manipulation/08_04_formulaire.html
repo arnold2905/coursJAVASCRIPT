@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="../css/styles.css">
 
     <!-- <script src="intro.js"></script> -->
+
+    <style>
+        .error {
+            border: 5px solid red;
+        }
+
+        .valide {
+            border: 5px solid greenyellow;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -87,12 +99,12 @@
                     
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="mdp2" id="mdp2" placeholder="Choisissez un mot de passe">
-                        <label for="mdp2">Choisissez un mot de passe</label>
+                        <label for="mdp2" id="placeholder1">Choisissez un mot de passe</label>
                     </div>
                 
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="confmdp2" id="confmdp2" placeholder="Confirmez votre mot de passe">
-                        <label for="confmdp2">Confirmez votre  mot de passe</label>
+                        <label for="confmdp2" id="placeholder2">Confirmez votre  mot de passe</label>
                     </div>
                 
                     <button type="submit" id="submit2" value="inscription" class="btn btn-primary">Je m'inscris</button>
